@@ -25,16 +25,17 @@
 // * The generated README includes the following sections: 
 
 
-//   * Installation
-//   * Usage
-//   * License
-//   * Contributing
-//   * Tests
-//   * Questions
+//   * 
+//   * 
+//   * 
+//   * 
+//   * 
+//   * 
 
 // * The generated README includes 1 badge that's specific to the repository.
 var inquirer = require("inquirer");
 var fs = require('fs');
+const generateMarkdown = require("./utils/generateMarkdown")
 
 inquirer.prompt([
   {
@@ -43,6 +44,12 @@ inquirer.prompt([
     message: "What is the Title of your Project?"
   },
   
+  {
+    type: "input",
+    name: "Description",
+    message: "Write a description of your project?"
+  },
+
   {
     type: "checkbox",
     message: "Do you want a Table of Contents?",
@@ -55,34 +62,64 @@ inquirer.prompt([
   
   {
     type: "input",
-    name: "Description",
-    message: "Write a description of your project?"
+    name: "Installation",
+    message: "Write directions on how to install "
   },
   
   {
-    type: "checkbox",
-    message: "What languages do you know?",
-    name: "stack",
-    choices: [
-      "HTML", 
-      "CSS", 
-      "JavaScript", 
-      "MySQL"
-    ]
+    type: "input",
+    name: "Usage",
+    message: "Write a description on the Usage "
   },
+  
   {
-    type: "list",
-    message: "What is your preferred method of communication?",
-    name: "contact",
-    choices: [
-      "email",
-      "phone",
-      "telekinesis"
-    ]
-  }
+    type: "input",
+    name: "License",
+    message: "Noteate here for any licencing "
+  },
+  
+  {
+    type: "input",
+    name: "Contributing",
+    message: "Write down any contributors "
+  },
+  
+  {
+    type: "input",
+    name: "Tests",
+    message: "Describe any testing that was done "
+  },
+  
+  {
+    type: "input",
+    name: "Questions",
+    message: "??? "
+  },
+  
+//   {
+//     type: "checkbox",
+//     message: "What languages do you know?",
+//     name: "stack",
+//     choices: [
+//       "HTML", 
+//       "CSS", 
+//       "JavaScript", 
+//       "MySQL"
+//     ]
+//   },
+//   {
+//     type: "list",
+//     message: "What is your preferred method of communication?",
+//     name: "contact",
+//     choices: [
+//       "email",
+//       "phone",
+//       "telekinesis"
+//     ]
+//   }
 ]).then(function(data) {
 
-  var filename = data.name.toLowerCase().split(' ').join('') + ".json";
+  var filename = data.Title.toLowerCase().split(' ').join('') + ".json";
 
   fs.writeFile(filename, JSON.stringify(data, null, '\t'), function(err) {
 
@@ -96,22 +133,22 @@ inquirer.prompt([
 });
 
 
-// array of questions for user
-const questions = [
+// // array of questions for user
+// const questions = [
 
-];
+// ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+// // function to write README file
+// function writeToFile(fileName, data) {
+// }
 
-// function to initialize program
-function init() {
+// // function to initialize program
+// function init() {
 
-}
+// }
 
-// function call to initialize program
-init();
+// // function call to initialize program
+// init();
 
 
 

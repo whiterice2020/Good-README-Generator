@@ -1,5 +1,14 @@
 {
-	"name": "a",
-	"stack": [],
-	"contact": "phone"
+	"Title": "a",
+	"Description": "a",
+	"TOC": [
+		"Yes",
+		"No"
+	],
+	"Installation": "a",
+	"Usage": "a",
+	"License": "a",
+	"Contributing": "a",
+	"Tests": "a",
+	"Questions": "a"
 }
