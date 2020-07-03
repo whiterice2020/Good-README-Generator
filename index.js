@@ -22,22 +22,19 @@
 // ```
 
 
-// * The generated README includes the following sections: 
-
-
-//   * 
-//   * 
-//   * 
-//   * 
-//   * 
-//   * 
 
 // * The generated README includes 1 badge that's specific to the repository.
 var inquirer = require("inquirer");
 var fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown")
 
-inquirer.prompt([
+// inquirer.prompt([
+  const questions = [
+  {
+    type: "input",
+    name: "username",
+    message: "What is your username on Github?"
+  },
   {
     type: "input",
     name: "Title",
@@ -95,39 +92,24 @@ inquirer.prompt([
     name: "Questions",
     message: "??? "
   },
-  
-//   {
-//     type: "checkbox",
-//     message: "What languages do you know?",
-//     name: "stack",
-//     choices: [
-//       "HTML", 
-//       "CSS", 
-//       "JavaScript", 
-//       "MySQL"
-//     ]
-//   },
-//   {
-//     type: "list",
-//     message: "What is your preferred method of communication?",
-//     name: "contact",
-//     choices: [
-//       "email",
-//       "phone",
-//       "telekinesis"
-//     ]
-//   }
-]).then(function(data) {
+] 
+// // function to write README file
+// function writeToFile(fileName, data) {
+// }
 
-  var filename = data.Title.toLowerCase().split(' ').join('') + ".json";
+inquirer.prompt(questions)
 
-  fs.writeFile(filename, JSON.stringify(data, null, '\t'), function(err) {
+  .then(function(data) {
+
+  var filename = data.Title.toLowerCase().split(' ').join('') + ".md";
+
+  fs.writeFile(filename, generateMarkdown(data), function(err) {
 
     if (err) {
       return console.log(err);
     }
 
-    console.log("Success!");
+    console.log("README file has been successfully generated.");
 
   });
 });
@@ -138,14 +120,12 @@ inquirer.prompt([
 
 // ];
 
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
+
+function writeToFile(filename, data) {}
+
 
 // // function to initialize program
-// function init() {
-
-// }
+// function init() {}
 
 // // function call to initialize program
 // init();
