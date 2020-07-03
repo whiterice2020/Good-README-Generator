@@ -53,7 +53,7 @@ inquirer.prompt([
   {
     type: "checkbox",
     message: "Do you want a Table of Contents?",
-    name: "TOC",
+    name: "TableOfContents",
     choices: [
       "Yes", 
       "No", 
