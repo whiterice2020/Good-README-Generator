@@ -99,7 +99,7 @@ const generateMarkdown = require("./utils/generateMarkdown")
 
 inquirer.prompt(questions)
 
-  .then(function(data) {
+  .then(function (data) {
 
   var filename = data.Title.toLowerCase().split(' ').join('') + ".md";
 
@@ -115,19 +115,13 @@ inquirer.prompt(questions)
 });
 
 
-// // array of questions for user
-// const questions = [
-
-// ];
-
-
 function writeToFile(filename, data) {}
 
 
-// // function to initialize program
-// function init() {}
+// function to initialize program
+function init() {}
 
-// // function call to initialize program
+// function call to initialize program
 // init();
 
 
