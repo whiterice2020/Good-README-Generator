@@ -37,20 +37,20 @@ const generateMarkdown = require("./utils/generateMarkdown")
   },
   {
     type: "input",
-    name: "Title",
+    name: "title",
     message: "What is the Title of your Project?"
   },
   
   {
     type: "input",
-    name: "Description",
+    name: "description",
     message: "Write a description of your project?"
   },
 
   {
     type: "checkbox",
     message: "Do you want a Table of Contents?",
-    name: "TableOfContents",
+    name: "tableOfContents",
     choices: [
       "Yes", 
       "No", 
@@ -59,37 +59,37 @@ const generateMarkdown = require("./utils/generateMarkdown")
   
   {
     type: "input",
-    name: "Installation",
+    name: "installation",
     message: "Write directions on how to install "
   },
   
   {
     type: "input",
-    name: "Usage",
+    name: "usage",
     message: "Write a description on the Usage "
   },
   
   {
     type: "input",
-    name: "License",
+    name: "license",
     message: "Noteate here for any licencing "
   },
   
   {
     type: "input",
-    name: "Contributing",
+    name: "contributing",
     message: "Write down any contributors "
   },
   
   {
     type: "input",
-    name: "Tests",
+    name: "tests",
     message: "Describe any testing that was done "
   },
   
   {
     type: "input",
-    name: "Questions",
+    name: "questions",
     message: "??? "
   },
 ] 
@@ -101,7 +101,7 @@ inquirer.prompt(questions)
 
   .then(function (data) {
 
-  var filename = data.Title.toLowerCase().split(' ').join('') + ".md";
+  var filename = data.title.toLowerCase().split(' ').join('') + ".md";
 
   fs.writeFile(filename, generateMarkdown(data), function(err) {
 
