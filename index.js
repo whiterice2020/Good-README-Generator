@@ -21,19 +21,10 @@
 // THEN I am taken to the corresponding section of the README
 // ```
 
-// ## Minimum Application Requirements
-
-// * Meets [Submission Requirements](#submission-requirements) in the following section.
-
-// * Functional application.
-
-// * GitHub repository with a unique name and a README describing project.
 
 // * The generated README includes the following sections: 
 
-//   * Title
-//   * Description
-//   * Table of Contents
+
 //   * Installation
 //   * Usage
 //   * License
@@ -42,6 +33,67 @@
 //   * Questions
 
 // * The generated README includes 1 badge that's specific to the repository.
+var inquirer = require("inquirer");
+var fs = require('fs');
+
+inquirer.prompt([
+  {
+    type: "input",
+    name: "Title",
+    message: "What is the Title of your Project?"
+  },
+  
+  {
+    type: "checkbox",
+    message: "Do you want a Table of Contents?",
+    name: "TOC",
+    choices: [
+      "Yes", 
+      "No", 
+    ]
+  },
+  
+  {
+    type: "input",
+    name: "Description",
+    message: "Write a description of your project?"
+  },
+  
+  {
+    type: "checkbox",
+    message: "What languages do you know?",
+    name: "stack",
+    choices: [
+      "HTML", 
+      "CSS", 
+      "JavaScript", 
+      "MySQL"
+    ]
+  },
+  {
+    type: "list",
+    message: "What is your preferred method of communication?",
+    name: "contact",
+    choices: [
+      "email",
+      "phone",
+      "telekinesis"
+    ]
+  }
+]).then(function(data) {
+
+  var filename = data.name.toLowerCase().split(' ').join('') + ".json";
+
+  fs.writeFile(filename, JSON.stringify(data, null, '\t'), function(err) {
+
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log("Success!");
+
+  });
+});
 
 
 // array of questions for user
