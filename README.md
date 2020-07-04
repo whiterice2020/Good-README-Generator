@@ -1,12 +1,12 @@
 
 
-  # ReadMe
+  # Good-README-Generator
 
   ![](https://img.shields.io/badge/License-OpenSource-brightgreen)
 
 
   # Description
-  App to create a read me file
+  This project automates the creation of a ReadMe file for projects on GitHub.  It will create required formatting for an industry standard ReadMe.md file.
 
 
   #Table of Contents
@@ -20,29 +20,37 @@
   
   # Installation
 
-  must have node installed and run index.js
+  You must have node installed. 
+  
+  1: In terminal, run the following command  
 
+  2: npm i  
+  
+  3: This will install all dependancies 
+  
   
   # Usage
 
-  Used to automate a readme file
+  A Developer will use this to automate the creation of their ReadMe file.  
+  
+  This will setup formatting, layout, Table of Contents with working links to the section of the page, Licensing Badges, a link to their GitHub page and also their email address for additional questions.
 
   
-  OpenSource
+ 
 
   # License
 
   
   # Tests
 
-  Tested with a live github account
+  Testing was done with a live GitHub account.
 
   
   # Questions
 
-  none
+  
 
   [Link to my GitHub](https://github.com/whiterice2020)
 
-  If you have any quesitons, you can email me at pdelpadre@gmail.com
+  If you have any quesitons, you can email me at github@delpadre.xyz
 
