@@ -64,7 +64,7 @@ const generateMarkdown = require("./utils/generateMarkdown")
   {
     type: "input",
     name: "questions",
-    message: "List any questions here. "
+    message: "List any questions you may have here.  If you do not have any questions, press enter."
   },
 ] 
 // // function to write README file
