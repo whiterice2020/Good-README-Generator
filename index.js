@@ -32,13 +32,14 @@ const generateMarkdown = require("./utils/generateMarkdown")
   const questions = [
   {
     type: "input",
-    name: "username",
-    message: "What is your username on Github?"
-  },
-  {
-    type: "input",
     name: "title",
     message: "What is the Title of your Project?"
+  },
+  
+  {
+    type: "input",
+    name: "username",
+    message: "What is your username on Github?"
   },
   
   {
@@ -98,28 +99,27 @@ const generateMarkdown = require("./utils/generateMarkdown")
 // }
 
 inquirer.prompt(questions)
-
   .then(function (data) {
 
-  var filename = data.title.toLowerCase().split(' ').join('') + ".md";
+      var filename = data.title.toLowerCase().split(' ').join('') + ".md";
 
-  fs.writeFile(filename, generateMarkdown(data), function(err) {
+      fs.writeFile(filename, generateMarkdown(data), function(err) {
 
-    if (err) {
-      return console.log(err);
-    }
+        if (err) {
+          return console.log(err);
+        }
 
-    console.log("README file has been successfully generated.");
+        console.log("README file has been successfully generated.");
 
-  });
+      });
 });
 
-
+// function to initialize program
 function writeToFile(filename, data) {}
 
 
-// function to initialize program
-function init() {}
+
+// function init() {}
 
 // function call to initialize program
 // init();
