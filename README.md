@@ -36,6 +36,9 @@
   This will setup formatting, layout, Table of Contents with working links to the section of the page, Licensing Badges, a link to their GitHub page and also their email address for additional questions.
 
   
+  # Videos and Images
+  
+  [![Demo Video](./utils/images/demo.jpg)](https://www.youtube.com/watch?v=YFTK1WGIanE "Click here to watch the demo!")
  
 
   # License
