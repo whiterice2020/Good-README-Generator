@@ -14,6 +14,8 @@ function generateMarkdown(data) {
   * [TableOfContents](#tableOfContents)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Images](#image)
+  * [Video](#video)
   * [License](#license)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -24,6 +26,8 @@ function generateMarkdown(data) {
   # Usage\n
   ${data.usage}\n
   
+  # Images\n
+
   ${data.license}\n
   # License\n
   
