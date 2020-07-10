@@ -40,6 +40,18 @@ const generateMarkdown = require("./utils/generateMarkdown")
   },
   
   {
+    type: "input",
+    name: "image",
+    message: "Enter the path and file name of the image you want to add.  Example ./assets/image1.jpg "
+  },
+  
+  {
+    type: "input",
+    name: "video",
+    message: "Enter the URL of your youtube video"
+  },
+  
+  {
     type: "list",
     name: "license",
     choices: [

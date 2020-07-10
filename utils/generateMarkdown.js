@@ -14,7 +14,7 @@ function generateMarkdown(data) {
   * [TableOfContents](#tableOfContents)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Images](#image)
+  * [Image](#image)
   * [Video](#video)
   * [License](#license)
   * [Tests](#tests)
@@ -27,10 +27,10 @@ function generateMarkdown(data) {
   ${data.usage}\n
   
   # Images\n
-  [![ImageAltName](Add URL Here./Assets/image1.jpg)]\n
+  [![ImageAltName](${data.image})]\n
 
   # Video\n
-  [![Demo Video](Add image path here./Assets/image2.jpg)](add youtube URL here https://youtu.be/VFepHQYjk_U "Click here to watch the demo!")\n
+  [![Demo Video](${data.image})](${data.video} "Click here to watch the demo!")\n
 
   # License\n
   ${data.license}\n
