@@ -27,11 +27,11 @@ function generateMarkdown(data) {
   ${data.usage}\n
   
   # Images\n
+  [![ImageAltName](Add URL Here./Assets/image1.jpg)]\n
 
   # Video\n
+  [![Demo Video](Add image path here./Assets/image2.jpg)](add youtube URL here https://youtu.be/VFepHQYjk_U "Click here to watch the demo!")\n
 
-
-  
   # License\n
   ${data.license}\n
 
