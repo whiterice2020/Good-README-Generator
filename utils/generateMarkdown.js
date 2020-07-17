@@ -27,10 +27,10 @@ function generateMarkdown(data) {
   ${data.usage}\n
   
   # Images\n
-  [![ImageAltName](${data.image})]\n
+  ![ImageAltName](${data.image})\n
 
   # Video\n
-  [![Demo Video](${data.image})](${data.video} "Click here to watch the demo!")\n
+  ![Demo Video](${data.image})](${data.video} "Click the image to watch the demo!")\n
 
   # License\n
   ${data.license}\n
